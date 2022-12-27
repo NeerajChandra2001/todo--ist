@@ -1,0 +1,13 @@
+<div class="mt-5 mx-3 "align=center>
+    <h1 class="mt-5">To Do List</h1>
+    
+    <input type="text  " class="mt-3" id="id" [(ngModel)]="task" placeholder="Enter your Tasks"> &nbsp;
+    <!-- <a href="#" class="btn btn-primary mt-2" (click)="addTask(task)">Add</a> -->
+    <input type="button" id="button"  value="Add" class="btn btn-primary " (click)="addTask(task)">
+</div>
+<br>
+<br>
+<ul align="center" *ngFor="let task of list">
+{{task.name}} <br> <button  id="b2" class="btn btn-danger mt-2 " (click)="remove(task.id)">Remove</button>
+
+</ul>
